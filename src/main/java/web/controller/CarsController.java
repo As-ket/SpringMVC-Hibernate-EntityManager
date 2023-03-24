@@ -10,7 +10,7 @@ import service.CarServiceImpl;
 
 @Controller
 public class CarsController {
-    CarService carService = new CarServiceImpl();
+    private final CarService carService = new CarServiceImpl();
 
     @GetMapping("/cars")
     public String you(@RequestParam(value = "count", defaultValue = "5") int count, Model model) {
