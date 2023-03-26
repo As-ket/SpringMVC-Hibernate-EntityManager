@@ -13,11 +13,8 @@ public class CarDaoImpl implements CarDao {
             , (new Car("XC90", "SUV", 2016)));
 
     @Override
-    public List<Car> getCars(int count) {
-        if (count <= 5) {
-            return cars.subList(0, count);
-        }
-        return cars;
+    public List<Car> getCars() {
+            return cars;
     }
 
 }
