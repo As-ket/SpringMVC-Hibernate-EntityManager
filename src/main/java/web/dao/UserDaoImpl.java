@@ -15,7 +15,6 @@ public class UserDaoImpl implements UserDao {
     @Override
     public List<User> getAllUsers() {
         return entityManager.createQuery("SELECT user FROM User user", User.class).getResultList();
-
     }
 
     @Override
@@ -25,17 +24,17 @@ public class UserDaoImpl implements UserDao {
 
 
     @Override
-    public void add(User user) {
+    public void addUser(User user) {
         entityManager.persist(user);
     }
 
     @Override
-    public void update(User user) {
+    public void updateUser(User user) {
         entityManager.merge(user);
     }
 
     @Override
-    public void delete(int id) {
+    public void deleteUser(int id) {
         entityManager.remove(getUserById(id));
     }
 
